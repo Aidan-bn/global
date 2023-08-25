@@ -1,0 +1,186 @@
+/* @font-face {
+    font-family: Catamaran;
+    src: url(../asset/fonts/Catamaran-Black.ttf);
+    color: red; 
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #FFFFFF;
+    height: 10vh;
+}
+
+nav {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+.logo {
+    width: 30px;
+}
+
+.menu {
+    width: 30px;
+    cursor: pointer;
+}
+
+main {
+    background-image: url(../asset/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    /* background-blend-mode: ; */
+    background-position: center;
+    height: 90vh;
+}
+
+.home {
+    width: 80vw;
+    margin: auto;
+}
+
+.main-title > h1 {
+    text-transform: uppercase;
+    color: #1a3358;
+    font-size: 40px;
+    font-weight: 800;
+    padding-top: 100px;
+}
+
+.main-title > p {
+    text-transform: capitalize;
+    color: 0894CC;
+    font-weight: 500;
+}
+
+.description {
+    margin: 50px 0;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.btn-try {
+    text-align: center;
+    margin-top: 83px;
+}
+
+.btn-main {
+    background-color: #1a3358;
+    color: #FFFFFF;
+    padding: 4px 30px;
+    border: 0;
+    font-weight: 600;
+}
+
+/* main body */
+
+.div-about {
+    width: 80vw;
+    margin: 50px auto;
+}
+
+.div-about > ul {
+    list-style: none;
+}
+
+.li-about {
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+.p-values {
+    padding-top: 10px;
+    margin: 0 20px;
+    width: 80%;
+    margin: auto;
+    list-style: decimal-leading-zero;
+}
+
+/* form portion */
+.div-form {
+    background-color: #1a3358;
+}
+
+form{
+    width: 80vw;
+    margin: auto;
+    padding: 40px 0;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 8px;
+    outline: 0;
+    border: 0;
+    color: #1a3358;
+}
+
+textarea {
+    height: 150px;
+}
+
+label {
+    padding: 10px 0;
+    color: #0894CC;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit {
+    padding: 5px 30px;
+    font-weight: 800;
+    color: #0894CC;
+    text-transform: uppercase;
+    border: 0;
+    margin-top: 10px;
+}
+
+.portfolio {
+    /* margin: auto; */
+    text-align: center;
+    /* width: 100vw; */
+    /* background-color: #0894CC; */
+    /* padding-top: 40px; */
+}
+
+.portfolio > h1 {
+    padding: 15px 0;
+    text-transform: capitalize;
+    color: #1a3358;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.project-scroll {
+    background-color: #b0acac;
+    text-transform: capitalize;
+    color: #0894CC;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.animation > img {
+    width: 100%;
+}
