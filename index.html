@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +15,12 @@
                     <img src="./asset/menu.svg" alt="menu" class="menu">
                 </li>
             </ul>
+            <menu class="menu-desktop">
+                <li>Home</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+                <li><a href="#">Log In</a></li>
+            </menu>
         </nav>
    </header>
    <main>
@@ -32,6 +39,9 @@
                     Try us today
                 </button>
             </div>
+        </section>
+        <section class="empty">
+           <h1>Hello</h1>
         </section>
    </main>
    <section class="about">
@@ -80,24 +90,24 @@
                     </p>   
                 </li>
             </ul>
+            <div class="card">
+                Cards
+            </div>
         </div>
         <div class="div-form">
-            <form>
-                <label for="name">
-                    <img src="./asset/uza.svg" alt="user-img" class="form-img">Name:
-                    <!-- <input type="text" name="name" placeholder="Aidan Banteze"> -->
+            <form method="post" id="user-contents">
+                <label for="user-img">
+                    <img src="./asset/uza.svg" alt="user-img" class="form-img" id="user-img">Name:
                 </label>
-                <input type="text" name="name" placeholder="Aidan Banteze" s>
-                <label for="email">
-                    <img src="./asset/email.svg" alt="email-img" class="form-img">Email:
-                    <!-- <input type="email" name="email" placeholder="aidan@go.tz"> -->
+                <input type="text" name="name" id="user-img" placeholder="Aidan Banteze" autocomplete="on">
+                <label for="email-img">
+                    <img src="./asset/email.svg" alt="email-img" class="form-img" id="email-img">Email:
                 </label>
-                <input type="email" name="email" placeholder="aidan@go.tz">
-                <label for="message">
-                    <img src="./asset/msg.svg" alt="msg-img" class="form-img">Message:
-                    <!-- <textarea placeholder="I appreciate ..."></textarea> -->
+                <input type="email" name="email" placeholder="aidan@go.tz" autocomplete="on">
+                <label for="msg-img">
+                    <img src="./asset/msg.svg" alt="msg-img" class="form-img" id="msg-img">Message:
                 </label>
-                <textarea placeholder="I appreciate ..."></textarea>
+                <textarea placeholder="I appreciate ..." autocomplete="on"></textarea>
                 <button class="submit">
                     Send
                 </button>
@@ -115,6 +125,73 @@
             project areas
         </p>
    </section>
-   hgcuyc
+   <section class="google-map">
+    <figure>
+        <img src="./asset/location.svg" alt="location">
+        <figcaption>Follow Us on Google Map</figcaption>
+    </figure>
+   </section>
+   <section class="events">
+        <div class="news">
+            <h1>News | Events</h1>
+            <hr />
+            <menu>
+                <li>
+                    <strong>Site Visit: </strong> we are expecting 
+                    to visit the sites by saturday morning. The office have 
+                    prepared the transport to all customers
+                </li>
+                <li>
+                    <strong>Site Visit: </strong> we are expecting 
+                    to visit the sites by saturday morning. The office have 
+                    prepared the transport to all customers
+                </li>
+            </menu>
+        </div>
+        <div class="slide">
+            <img src="./asset/scrol-poster2.png" alt="visit">
+            <img src="./asset/scrol-poster1.png" alt="visit">
+        </div>
+   </section>
+   <section class="contact">
+        <h1>Contact Us</h1>
+        <hr />
+        <menu>
+            <li>
+                P.O.Box 3626
+            </li>
+            <li>
+                Mtendeni street block N, Plot No. 7
+            </li>
+            <li>Tel:</li>
+            <li>
+                 +255 - 736 222120 | 717 047828
+            </li>
+            <li>
+                 +255 - 625 932003 | 752 172384
+            </li>
+            <li>
+                Fax:
+            <li>
+                +255 736 222 12
+            </li>
+            <li> 
+                Email:
+            </li>
+            <li> 
+                info@globalfortune.co.tz
+            </li>
+        </menu>
+   </section>
+   <section class="footer">
+        <div class="div-footer">
+            &copy; 2023
+            <menu>
+                <img src="./asset/insta.svg" alt="instagram">
+                <img src="./asset/twiteer.svg" alt="twitter">
+            </menu>
+            <a href="./pages/login.html">Log In</a>
+        </div>
+   </section>
 </body>
 </html>
