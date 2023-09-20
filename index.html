@@ -12,7 +12,7 @@
             <img src="./asset/logo.svg" alt="logo" class="logo">
             <ul>
                 <li>
-                    <img src="./asset/menu.svg" alt="menu" class="menu">
+                    <img src="./asset/menu.svg" alt="menu" class="menu" id="menu">
                 </li>
             </ul>
             <menu class="menu-desktop">
@@ -20,6 +20,13 @@
                 <li>Portfolio</li>
                 <li>Contact</li>
                 <li><a href="./pages/login.html">Log In</a></li>
+            </menu>
+            <menu class="hamburger" id="hamburger">
+                <li class="menu-item"><a href="/index.html">Home</a></li>
+                <li class="menu-item"><a href="#Portfolio">Portfolio</a></li>
+                <li class="menu-item"><a href="#contact">Contact</a></li>
+                <li class="menu-item"><a href="./pages/login.html">Log In</a></li>
+                <li class="close" id="close">X</li>
             </menu>
         </nav>
    </header>
@@ -125,7 +132,7 @@
             </form>
         </div>
    </section>
-   <section class="portfolio">
+   <section class="portfolio" id="Portfolio">
         <h1>
             we take you to the next level
         </h1>
@@ -159,41 +166,25 @@
                 </li>
             </menu>
         </div>
-        <div class="slide">
-            <img src="./asset/scrol-poster2.png" alt="visit">
-            <img src="./asset/scrol-poster1.png" alt="visit">
-            <img src="./asset/scrol-poster2.png" alt="visit">
-            <img src="./asset/scrol-poster1.png" alt="visit">
+        <div class="slide" >
+            <figure class="img-slides">
+                <img alt="slides" name="slides" >
+            </figure>
         </div>
    </section>
-   <section class="contact">
+   <section class="contact" id="contact">
         <h1>Contact Us</h1>
         <hr />
         <menu>
-            <li>
-                P.O.Box 3626
-            </li>
-            <li>
-                Mtendeni street block N, Plot No. 7
-            </li>
+            <li> P.O.Box 3626</li>
+            <li> Mtendeni street block N, Plot No. 7</li>
             <li>Tel:</li>
-            <li>
-                 +255 - 736 222120 | 717 047828
-            </li>
-            <li>
-                 +255 - 625 932003 | 752 172384
-            </li>
-            <li>
-                Fax:
-            <li>
-                +255 736 222 12
-            </li>
-            <li> 
-                Email:
-            </li>
-            <li> 
-                info@globalfortune.co.tz
-            </li>
+            <li> +255 - 736 222120 | 717 047828</li>
+            <li> +255 - 625 932003 | 752 172384</li>
+            <li>Fax:</li>
+            <li>+255 736 222 12</li>
+            <li> Email:</li>
+            <li> info@globalfortune.co.tz</li>
         </menu>
    </section>
    <section class="footer">
@@ -216,5 +207,6 @@
             <a href="./pages/login.html" class="down-login">Log In</a>
         </div>
    </section>
+   <script src="/js/index.js"></script>
 </body>
 </html>
