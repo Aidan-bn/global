@@ -16,16 +16,16 @@
                 </li>
             </ul>
             <menu class="menu-desktop">
-                <li>Home</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-                <li><a href="./pages/login.html">Log In</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="desktop-links"><a href="./pages/login.html">Log In</a></li>
             </menu>
             <menu class="hamburger" id="hamburger">
                 <li class="menu-item"><a href="/index.html">Home</a></li>
                 <li class="menu-item"><a href="#Portfolio">Portfolio</a></li>
                 <li class="menu-item"><a href="#contact">Contact</a></li>
-                <li class="menu-item"><a href="./pages/login.html">Log In</a></li>
+                <li class="menu-item"><a href="./pages/login.php">Log In</a></li>
                 <li class="close" id="close">X</li>
             </menu>
         </nav>
@@ -37,18 +37,20 @@
                 <p>company limited</p>
             </div>
             <p class="description">
-                Welcome to a leading Real Estate Company in Tanzania.
-                You need to invest in land? We are her to take you to the 
-                next step in this sector
+                Was incorporated in 2019 .The company was formed to bring 
+                fair and smart competitively real estate services in Tanzania. 
+                We offer a complete portfolio of real estate services including 
+                land acquisition, land management and selling of residential and 
+                commercial plots in Tanzania
             </p>
             <div class="btn-try">
                 <button class="btn-main">
-                    Try us today
+                   <a href="#user-contents"> Try us today </a>
                 </button>
             </div>
         </section>
         <section class="empty">
-           <h1>Hello</h1>
+           <h1></h1>
         </section>
    </main>
    <section class="about">
@@ -84,36 +86,72 @@
                                 and ethical in our all actions.
                             </li>
                             <li>
-                                <strong>Integrity:</strong> We keep our promises – we walk
-                                the talk. We are honest, trustworthy 
-                                and ethical in our all actions.
+                                <strong>Competence:</strong> We are research driven to give 
+                                reliable information that help our clients make the right 
+                                decisions with transparency.
                             </li>
                             <li>
-                                <strong>Integrity:</strong> We keep our promises – we walk
-                                the talk. We are honest, trustworthy 
-                                and ethical in our all actions.
+                                <strong>Excellence:</strong> Our commitment to professional 
+                                excellence ensures that our clients receive the highest 
+                                quality service 
+                            </li>
+                            <li>
+                                <strong>Customer services:</strong> Our clients are the driving 
+                                force of our existence through keeping them satisfied is the 
+                                fundamental reason for our existence
                             </li>
                         </ul>
                     </p>   
                 </li>
             </ul>
             <div class="card">
-                <div class="card-item">
-                    <label for="land-survey">Land survey</label>
+                <div>
+                    <div class="card-item" id="land-survey">
+                        <label for="land-survey">Land survey</label>
+                    </div>
+                    <p class="card-p" id="card-p-survey">We have more than 3500 plots in Dodoma (The capita city of Tanzania)
+                        These plots are located at VIkonje, Chahwa, Mahoma Makulu and Ipala 
+                        with a price ranging from TSH 8,000/= per square meter for residential 
+                        plots, TSH 9,000/= per square meter for commercial residential plots at 
+                        chahwa and Ipala and TSH 10,000/= per square meter for residential Plots 
+                        at vikonje and Mahoma makulu
+                    </p>
                 </div>
-                <div class="card-item">
-                    <label for="land-survey">Selling plots</label>
+                <div>
+                    <div class="card-item" id="selling-plots">
+                        <label for="land-survey">Selling plots</label>
+                    </div>
+                    <p class="card-p" id="card-p-plots">We work together committing to achieving common goals and support one 
+                        another for better achievement into our daily activities with high 
+                        satisfactions for both team and customers(Individual, 
+                        Private sectors and Government sectors).
+                    </p>
                 </div>
-                <div class="card-item">
-                    <label for="land-survey">Our Customers</label>
+                <div>
+                    <div class="card-item" id="customers">
+                        <label for="land-survey">Our Customers</label>
+                    </div>
+                    <p class="card-p" id="card-p-customers">Among our customers, includes Ministry of health,
+                        Milembe hospital, NHIF, Ministry of transport, Tanzania Broadcasting Cooperation,
+                        Marine, Uhuru Media, Ministry of Minerals, Tanzanian Geological Society (GOVERNMENT 
+                        INSTITUTIONS) Rafrec Group of Companies, Decca Group Co Ltd, Sacco’s groups 
+                        (PRIVATE SECTOR)
+                        
+                    </p>
                 </div>
-                <div class="card-item">
-                    <label for="land-survey">Our partners</label>
+                <div>
+                    <div class="card-item" id="partners">
+                        <label for="land-survey">Our partners</label>
+                    </div>
+                    <p class="card-pi" id="card-p-partner">Dodoma City council, RAFREC Company Ministry of Minerals, 
+                        Tanzanian Geological Society (GOVERNMENT INSTITUTIONS) Rafrec Group of 
+                        Companies, Decca Group Co Ltd, Sacco’s groups (PRIVATE SECTOR)
+                    </p>
                 </div>
             </div>
         </div>
         <div class="div-form">
-            <form method="post" id="user-contents">
+            <form method="post" id="user-contents" action="./db/database.php">
                 <label for="user-img">
                     <img src="./asset/uza.svg" alt="user-img" class="form-img" id="user-img">Name:
                 </label>
@@ -125,11 +163,12 @@
                 <label for="msg-img">
                     <img src="./asset/msg.svg" alt="msg-img" class="form-img" id="msg-img">Message:
                 </label>
-                <textarea placeholder="I appreciate ..." autocomplete="on"></textarea>
+                <textarea placeholder="I appreciate ..." autocomplete="on" name="message"></textarea>
                 <button class="submit">
                     Send
                 </button>
             </form>
+            
         </div>
    </section>
    <section class="portfolio" id="Portfolio">
@@ -148,6 +187,11 @@
         <img src="./asset/location.svg" alt="location">
         <figcaption>Follow Us on Google Map</figcaption>
     </figure>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.32261649768!2d35.74800396023973!
+3d-6.178221069636768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184de5286f5ce4cb%3A0x959d8703e9
+a290d1!2sGlobal%20Fortune%20Real%20Estate%20Company!5e0!3m2!1ssw!2stz!4v1599053944954!5m2!1ssw!2stz" 
+width="100%" height="700" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+</iframe>
    </section>
    <section class="events">
         <div class="news">
@@ -204,9 +248,9 @@
                 <img src="./asset/twiteer.svg" alt="twitter">
                 gfortune
             </menu>
-            <a href="./pages/login.html" class="down-login">Log In</a>
+            <a href="./pages/login.php" class="down-login">Log In</a>
         </div>
    </section>
-   <script src="/js/index.js"></script>
+   <script src="./js/index.js"></script>
 </body>
 </html>
