@@ -13,15 +13,16 @@ header {
     justify-content: center;
 }
 
-header > menu > li > button {
+header > menu > li > a {
     color: #fff;
     background-color: #1a3358;
-    padding: 2px 10px;
+    padding: 2px 20px;
     border: 0;
     cursor: pointer;
+    text-decoration: none;
 }
 
-header > menu > li > button:hover {
+header > menu > li > a:hover {
     color: #1a3358;
     background-color: #fff;
 }
@@ -36,9 +37,16 @@ menu {
     justify-content: end;
 }
 
+.user-db {
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
 main {
     height: 90vh;
     background-color: #1a3358;
+    color: #0894CC;
 }
 
 main > h1 {
@@ -59,8 +67,9 @@ table {
     border: 0.6px solid #FFFFFF;
     color: #FFFFFF;
     margin: auto;
-    width: 90%;
+    width: 80%;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .tb-heading{
@@ -68,9 +77,19 @@ table {
     text-transform: uppercase;
 }
 
+.top-raw {
+    background-color: #0894CC;
+    font-weight: 800;
+}
+
+.row-mysql {
+    border-right: 0.2px solid #fff;
+}
+
 /* form rendering */
 .main-form {
  display: flex;
+ flex-direction: column;
 }
 
 form {
@@ -96,14 +115,38 @@ form {
     outline: none;
 }
 
-button {
+input > .checkbox {
+    border: 0;
+}
+
+.btn-login {
     padding: 2px 25px;
     justify-self: center;
     border: 1px solid #0894CC;
+    background-color: #1a3358;
+    color: #fff;
     font-size: 17px;
     font-weight: 600;
     border-radius: 3px;
-    width: 100%;
+    /* width: 100%; */
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    color: #1a3358;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* .checkbox {
+    color: #1a3358;
+    display: block; 
+    border: 2px solid red;
+} */
+
+.note {
+    color: #1a3358;
+    margin-left: 20px;
 }
 
 .out {
@@ -130,4 +173,13 @@ button {
     form {
         width: 40vw;
     }
+}
+
+.alert {
+    margin: auto;
+    /* width: 70vw; */
+    /* border-bottom: 1px solid #0894CC; */
+    color: rgb(225, 60, 60);
+    text-align: center;
+    font-weight: 600;
 }
