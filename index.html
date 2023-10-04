@@ -9,20 +9,22 @@
 <body>
    <header>
         <nav>
-            <img src="./asset/logo.svg" alt="logo" class="logo">
+            <a href="index.html"><img src="./asset/logo.svg" alt="logo" class="logo"></a>
             <ul>
                 <li>
                     <img src="./asset/menu.svg" alt="menu" class="menu" id="menu">
                 </li>
             </ul>
             <menu class="menu-desktop">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="#about">About</a></li>
                 <li><a href="#Portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="desktop-links"><a href="./pages/login.html">Log In</a></li>
+                <li class="desktop-links"><a href="./pages/login.php">Log In</a></li>
             </menu>
             <menu class="hamburger" id="hamburger">
                 <li class="menu-item"><a href="/index.html">Home</a></li>
+                <li class="menu-item"><a href="#about">About</a></li>
                 <li class="menu-item"><a href="#Portfolio">Portfolio</a></li>
                 <li class="menu-item"><a href="#contact">Contact</a></li>
                 <li class="menu-item"><a href="./pages/login.php">Log In</a></li>
@@ -53,7 +55,7 @@
            <h1></h1>
         </section>
    </main>
-   <section class="about">
+   <section class="about" id="about">
         <div class="div-about">
             <ul class="ul-about">
                 <li class="li-about">
@@ -150,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <div class="div-form">
+        <div class="div-form" id="contact">
             <form method="post" id="user-contents" action="./db/database.php">
                 <label for="user-img">
                     <img src="./asset/uza.svg" alt="user-img" class="form-img" id="user-img">Name:

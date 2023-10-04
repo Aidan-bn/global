@@ -1,21 +1,16 @@
 <?php
+ session_start();
+ if(!isset($_SESSION['id']) || (trim($_SESSION['id']) == '')){
+    header('Location: login.php');
+    exit();
+ }
 
-    $connect = mysqli_connect("localhost", "root", "", "global");
-    if(mysqli_connect_error()){
-        echo "Error with database connectivty";
-    } else {
-        $select = "SELECT * FROM `contact` ORDER BY `id` ASC";
-        $result = mysqli_query($connect, $select);
-        if(mysqli_num_rows($result) > 0 ){
-            // $result_array = array();
-            // while($row = mysqli_fetch_assoc($result)){
-            //     array_push($result_array, $row);
-            $msg = "No record found";
-            }else{
-                $msg = "No record found";
-            }
-        }
+ include('connect.php');
+ $query = mysqli_query($conn, "SELECT * FROM users WHERE id = '".$_SESSION['id']."'");          
+ $row = mysqli_fetch_assoc($query);
 
+ $select = "SELECT * FROM contact ORDER BY id DESC";
+ $result = mysqli_query($conn, $select);
 ?>
 
 <!DOCTYPE html>
@@ -30,37 +25,41 @@
     <header>
         <menu>
             <li>Welcome: </li>
-            <li>Aidan</li>
+            <li class="user-db"><?php echo $row['user_name']; ?></li>
             <li>
-                <button>Log Out</button>
+                <a href="logout.php">Log Out</a>
             </li>
         </menu>
     </header>
     <main>
         <h1>received request</h1>
-        <?php $msg; ?>
-        <table>
-            <thead>
-                <tr>
-                    <th class="tb-heading">Email</th>
-                    <th class="tb-heading">Name</th>
-                    <th class="tb-heading">Message</th>
-                    <th class="tb-heading">Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    while($row = mysqli_fetch_assoc($result)){?>
-                    <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['email']; ?></td>
-                        <td><?php echo $row['message']; ?></td>
-                        <td><?php echo $row['timereceived']; ?></td> 
-                    <tr>
-                <?}?>
-            </tbody>   
-        </table>
+        <?php
+            if(mysqli_num_rows($result) > 0){
+                // echo "<h3>Data seen in a database</h3>";
+                echo '<table>
+                        <tr class="top-raw">
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Date/Time</th>
+                        </tr>';
+                    while ($row = mysqli_fetch_assoc($result)){
+                        echo '<tr>
+                                <td class="row-mysql">' .$row["id"] . '</td>
+                                <td class="row-mysql">' .$row["name"] . '</td>
+                                <td class="row-mysql">' .$row["email"] . '</td>
+                                <td class="row-mysql">' .$row["message"] . '</td>
+                                <td >' .$row["timereceived"] . '</td>
+                              </tr>';
+            }
+            echo '<table>';
+        }
+            else {
+                echo "No result";
+            }
+            mysqli_close($conn);
+        ?>
     </main>
 </body>
 </html>

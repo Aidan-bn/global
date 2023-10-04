@@ -1,6 +1,7 @@
 <?php
 
 $connect = mysqli_connect('localhost', 'root', '', 'global');
+//$msg = "<div><a href='#'>Invalid email or Password</a></div>";
 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -15,7 +16,5 @@ $rs = mysqli_query($connect, $sql);
 if($rs){
     header("Location:$url");
 }
-
-// codes for login page
 
 ?>
